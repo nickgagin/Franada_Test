@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Franada</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QMdiArea" name="mdiArea">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="background">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>203</red>
+         <green>203</green>
+         <blue>203</blue>
+        </color>
+       </brush>
+      </property>
+      <property name="viewMode">
+       <enum>QMdiArea::SubWindowView</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="actionOpenProject"/>
+    <addaction name="actionSaveProject"/>
+    <addaction name="separator"/>
+    <addaction name="action_CloseProgram"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Правка</string>
+    </property>
+    <addaction name="actionEditProject"/>
+    <addaction name="actionTest"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Окно</string>
+    </property>
+    <addaction name="actionCascadeWindows"/>
+    <addaction name="actionTileWindows"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionEditProject"/>
+   <addaction name="actionSaveProject"/>
+   <addaction name="separator"/>
+   <addaction name="actionTest"/>
+   <addaction name="actionTryFFMPEG"/>
+   <addaction name="actionWebCam"/>
+   <addaction name="separator"/>
+   <addaction name="actionCascadeWindows"/>
+   <addaction name="actionTileWindows"/>
+   <addaction name="actionShowNavData"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionEditProject">
+   <property name="icon">
+    <iconset resource="franada.qrc">
+     <normaloff>:/icons/file-properties.png</normaloff>:/icons/file-properties.png</iconset>
+   </property>
+   <property name="text">
+    <string>Редактировать проект</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionSaveProject">
+   <property name="icon">
+    <iconset resource="franada.qrc">
+     <normaloff>:/icons/file_save.png</normaloff>:/icons/file_save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить проект</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранение всех изменений в файл проекта</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionOpenProject">
+   <property name="icon">
+    <iconset resource="franada.qrc">
+     <normaloff>:/icons/file_open.png</normaloff>:/icons/file_open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Открыть проект</string>
+   </property>
+   <property name="toolTip">
+    <string>Открытие файла проекта</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="icon">
+    <iconset resource="franada.qrc">
+     <normaloff>:/icons/button_test_check.png</normaloff>:/icons/button_test_check.png</iconset>
+   </property>
+   <property name="text">
+    <string>Test</string>
+   </property>
+   <property name="toolTip">
+    <string>Test Button</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionCascadeWindows">
+   <property name="icon">
+    <iconset resource="franada.qrc">
+     <normaloff>:/icons/application_cascade.png</normaloff>:/icons/application_cascade.png</iconset>
+   </property>
+   <property name="text">
+    <string>Выстроить окна каскадом</string>
+   </property>
+  </action>
+  <action name="actionTileWindows">
+   <property name="icon">
+    <iconset resource="franada.qrc">
+     <normaloff>:/icons/application_tile.png</normaloff>:/icons/application_tile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Выстроить по сетке</string>
+   </property>
+  </action>
+  <action name="actionShowNavData">
+   <property name="icon">
+    <iconset resource="franada.qrc">
+     <normaloff>:/icons/map_icon.png</normaloff>:/icons/map_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Навигационные данные</string>
+   </property>
+  </action>
+  <action name="actionTryFFMPEG">
+   <property name="icon">
+    <iconset resource="franada.qrc">
+     <normaloff>:/icons/video-avi.png</normaloff>:/icons/video-avi.png</iconset>
+   </property>
+   <property name="text">
+    <string>TryFFMPEG</string>
+   </property>
+   <property name="toolTip">
+    <string>Open FFMPEG test window</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="action_CloseProgram">
+   <property name="text">
+    <string>Закрыть программу</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionWebCam">
+   <property name="icon">
+    <iconset resource="franada.qrc">
+     <normaloff>:/icons/video-avi.png</normaloff>:/icons/video-avi.png</iconset>
+   </property>
+   <property name="text">
+    <string>WebCam</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Webcam Window</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="franada.qrc"/>
+ </resources>
+ <connections/>
+</ui>

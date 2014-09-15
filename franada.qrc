@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/file_open.png</file>
+        <file>icons/file_save.png</file>
+        <file>icons/file-properties.png</file>
+        <file>icons/button_test_check.png</file>
+        <file>icons/binary_.png</file>
+        <file>icons/application_cascade.png</file>
+        <file>icons/application_tile.png</file>
+        <file>icons/compass_button.png</file>
+        <file>icons/map_icon.png</file>
+        <file>icons/satellite.png</file>
+        <file>icons/world_satellite.png</file>
+        <file>icons/video-avi.png</file>
+    </qresource>
+</RCC>
