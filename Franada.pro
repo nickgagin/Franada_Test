@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -40,12 +40,7 @@ LIBS+=-LC://opencv//qt_build2//bin// \
     -lopencv_video248 \
     -lopencv_gpu248
 
-#LIBS+=-LC://opencv//ocv244_build//x86//mingw//lib// \
-#    -lopencv_core244 \
-#    -lopencv_highgui244 \
-#    -lopencv_imgproc244 \
-#    -lopencv_video244 \
-#    -lopencv_gpu244
+
 
 LIBS+=-LD://FFMPEG//lib \
     -llibavutil     \
@@ -56,29 +51,10 @@ LIBS+=-LD://FFMPEG//lib \
     -llibswresample \
     -llibswscale
 
-INCLUDEPATH+=C://opencv//qt_build//include
-#INCLUDEPATH += C://opencv//ocv244_build//include
+INCLUDEPATH += C://opencv//qt_build//include
 
 INCLUDEPATH += D://FFMPEG//include
 
-
-
-## Set FFMPEG_LIBRARY_PATH to point to the directory containing the FFmpeg import libraries (if needed - typically for Windows), i.e. the dll.a files
-#FFMPEG_LIBRARY_PATH = ffmpeg/lib
-
-## Set FFMPEG_INCLUDE_PATH to point to the directory containing the FFMPEG includes (if needed - typically for Windows)
-#FFMPEG_INCLUDE_PATH = ffmpeg
-
-#LIBS += -L$$FFMPEG_LIBRARY_PATH
-
-#LIBS += -lavutil \
-#    -lavcodec \
-#    -lavformat \
-#    -lswscale
-
-
-
-#INCLUDEPATH += $$FFMPEG_INCLUDE_PATH
 
 ## Requied for some C99 defines
 DEFINES += __STDC_CONSTANT_MACROS
