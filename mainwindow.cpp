@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setCentralWidget(ui->mdiArea);
 }
 
 MainWindow::~MainWindow()
@@ -25,19 +26,6 @@ void MainWindow::on_actionEditProject_triggered()
 
 void MainWindow::on_actionTest_triggered()
 {
-//    QWidget* centralWidget = new QWidget;
-//    QRect r1(0, 0, 704, 576);
-
-
-//    QMdiSubWindow* msWindow = new QMdiSubWindow;
-//    msWindow->setWidget(centralWidget);
-//    msWindow->setWindowTitle("Новое MDI окно");
-
-//    msWindow->setGeometry(r1);
-
-//    ui->mdiArea->addSubWindow(msWindow);
-//    msWindow->show();
-
     VideoForm* vfWindow = new VideoForm();
     ui->mdiArea->addSubWindow(vfWindow);
     vfWindow->show();

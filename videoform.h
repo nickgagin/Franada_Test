@@ -10,7 +10,11 @@
 #include <QMediaPlayer>
 #include <QAbstractVideoSurface>
 #include <QAbstractVideoBuffer>
+#include <QVideoWidget>
 #include <QVideoFrame>
+#include <QVideoProbe>
+#include <QMediaContent>
+#include <QMediaResource>
 
 
 namespace Ui {
@@ -37,13 +41,18 @@ private:
     char *filename;
 
 
-    QMediaPlayer* mediaPlayer;
-    QAbstractVideoSurface* videoSurface;
+    QMediaPlayer* player;
+    QVideoWidget* videoWidget;
     QVideoFrame* videoFrame;
+    QVideoProbe* videoProbe;
+//    QAbstractVideoSurface* videoSurface;
+
 
 
 public slots:
     void TimerTick();
+    void showVideoFrame(QVideoFrame frame);
 };
+
 
 #endif // VIDEOFORM_H
